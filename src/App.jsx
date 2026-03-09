@@ -1,3 +1,5 @@
+import { useEffect, useMemo, useState } from "react"
+
 const speakers = [
   {
     name: "Dr. Ashish Sharma",
@@ -197,6 +199,20 @@ const themes = [
   "Future Trends in Intelligent Cyber Defense and Smart Security Systems",
 ]
 
+const tickerItems = [
+  "Live Topic: AI-driven Threat Detection",
+  "Workshop Focus: Ethical Hacking and VAPT",
+  "Research Track: Blockchain Security",
+  "Special Session: Digital Forensics",
+]
+
+const aiTracks = [
+  { title: "Threat Detection Models", detail: "ML models for anomaly and malware behavior detection.", level: 92 },
+  { title: "Fraud Intelligence", detail: "AI pipelines for financial and identity fraud prevention.", level: 86 },
+  { title: "SOC Automation", detail: "Smart triage and response orchestration with AI agents.", level: 88 },
+  { title: "Secure GenAI", detail: "Prompt hardening, abuse detection, and policy guardrails.", level: 84 },
+]
+
 const getInitials = (name) =>
   name
     .replace(/\b(Dr|Mr|Mrs|Ms|Smt)\.?\s*/gi, "")
@@ -207,8 +223,38 @@ const getInitials = (name) =>
     .join("")
 
 function App() {
+  const seminarDate = useMemo(() => new Date("2026-04-06T09:00:00+05:30"), [])
+  const [now, setNow] = useState(new Date())
+  const [scrollProgress, setScrollProgress] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => setNow(new Date()), 1000)
+    return () => clearInterval(timer)
+  }, [])
+
+  useEffect(() => {
+    const onScroll = () => {
+      const doc = document.documentElement
+      const total = doc.scrollHeight - window.innerHeight
+      const progress = total > 0 ? (window.scrollY / total) * 100 : 0
+      setScrollProgress(Math.min(100, Math.max(0, progress)))
+    }
+
+    onScroll()
+    window.addEventListener("scroll", onScroll, { passive: true })
+    return () => window.removeEventListener("scroll", onScroll)
+  }, [])
+
+  const remaining = Math.max(0, seminarDate.getTime() - now.getTime())
+  const days = Math.floor(remaining / (1000 * 60 * 60 * 24))
+  const hours = Math.floor((remaining / (1000 * 60 * 60)) % 24)
+  const minutes = Math.floor((remaining / (1000 * 60)) % 60)
+
   return (
     <div className="site-shell">
+      <div className="scroll-progress">
+        <span style={ { width: `${scrollProgress}%` } } />
+      </div>
       <header className="topbar">
         <div className="brand">
           <img
@@ -225,6 +271,7 @@ function App() {
           <a href="#about">About</a>
           <a href="#objective">Objective</a>
           <a href="#themes">Themes</a>
+          <a href="#ai-lab">AI Lab</a>
           <a href="#speakers">Invited Guest Speakers
           </a>
           <a href="#committee">Committee</a>
@@ -240,8 +287,12 @@ function App() {
           alt="MLK College Campus"
           className="hero-bg-image"
         />
+        <div className="hero-grid-overlay" aria-hidden="true" />
         <p className="kicker">National Seminar</p>
-        <h1>Latest Trends in Cyber Security and AI/ML</h1>
+        <h1>
+          Latest Trends in <span className="cyber-highlight">Cyber Security</span> and{" "}
+          <span className="cyber-highlight">AI/ML</span>
+        </h1>
         <p className="hero-line">
           Organized by B.C.A Department of Maharani Lal Kunwari (P.G.) College, Balrampur
         </p>
@@ -252,6 +303,33 @@ function App() {
           <a href="#about" className="button-secondary">
             Explore Details
           </a>
+        </div>
+        <div className="countdown-strip" role="status" aria-live="polite">
+          <p className="countdown-title">Seminar Starts In</p>
+          <div className="countdown-grid">
+            <div className="countdown-chip">
+              <span>{days}</span>
+              <small>Days</small>
+            </div>
+            <div className="countdown-chip">
+              <span>{hours}</span>
+              <small>Hours</small>
+            </div>
+            <div className="countdown-chip">
+              <span>{minutes}</span>
+              <small>Minutes</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="cyber-ticker" aria-label="Seminar highlights">
+        <div className="ticker-track">
+          {[...tickerItems, ...tickerItems].map((item, idx) => (
+            <span key={`${item}-${idx}`} className="ticker-item">
+              {item}
+            </span>
+          ))}
         </div>
       </section>
 
@@ -301,6 +379,25 @@ function App() {
             <li key={ theme }>{ theme }</li>
           )) }
         </ol>
+      </section>
+
+      <section id="ai-lab" className="panel panel-ai">
+        <h2>AI Innovation Lab</h2>
+        <p>
+          A focused showcase on how AI and ML can strengthen cyber defense through intelligent monitoring,
+          predictive analytics, and automated response strategies.
+        </p>
+        <div className="ai-grid">
+          {aiTracks.map((track) => (
+            <article key={track.title} className="ai-card">
+              <h3>{track.title}</h3>
+              <p>{track.detail}</p>
+              <div className="ai-meter" role="img" aria-label={`${track.title} readiness ${track.level} percent`}>
+                <span style={{ width: `${track.level}%` }} />
+              </div>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section id="speakers" className="panel">
