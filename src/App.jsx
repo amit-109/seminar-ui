@@ -6,7 +6,7 @@ const speakers = [
 ]
 
 const committee = [
-  { name: "Prof. S. P. Mishra", post: "Chief Patron, Principal MLK College" },
+  { name: "Prof. J. P. Pandey", post: "Chief Patron, Principal MLK College" },
   { name: "Dr. Kavita Tiwari", post: "Conference Chair, Department of Computer Science" },
   { name: "Dr. Arvind Jain", post: "Organizing Secretary, Cyber Cell" },
   { name: "Ms. Ananya Yadav", post: "Co-Organizing Secretary, AI Club" },
