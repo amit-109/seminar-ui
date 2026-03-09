@@ -226,10 +226,15 @@ function App() {
   const seminarDate = useMemo(() => new Date("2026-04-06T09:00:00+05:30"), [])
   const [now, setNow] = useState(new Date())
   const [scrollProgress, setScrollProgress] = useState(0)
+  const [showRegisterDialog, setShowRegisterDialog] = useState(false)
 
   useEffect(() => {
     const timer = setInterval(() => setNow(new Date()), 1000)
     return () => clearInterval(timer)
+  }, [])
+
+  useEffect(() => {
+    setShowRegisterDialog(true)
   }, [])
 
   useEffect(() => {
@@ -252,6 +257,25 @@ function App() {
 
   return (
     <div className="site-shell">
+      {showRegisterDialog && (
+        <div className="dialog-backdrop" role="dialog" aria-modal="true" aria-label="Seminar registration">
+          <div className="register-dialog">
+            <h3>National Seminar 2026</h3>
+            <p>Registrations are open for the seminar on Latest Trends in Cyber Security and AI/ML.</p>
+            <a href={formLink} target="_blank" rel="noreferrer" className="button-primary dialog-button blink-cta">
+              Register Now
+            </a>
+            <button
+              type="button"
+              className="dialog-close"
+              onClick={() => setShowRegisterDialog(false)}
+            >
+              Continue to Website
+            </button>
+          </div>
+        </div>
+      )}
+
       <div className="scroll-progress">
         <span style={ { width: `${scrollProgress}%` } } />
       </div>
@@ -474,7 +498,7 @@ function App() {
               { formLink }
             </a>
             <div className="hero-cta register-actions">
-              <a className="button-primary" href={ formLink } target="_blank" rel="noreferrer">
+              <a className="button-primary blink-cta" href={ formLink } target="_blank" rel="noreferrer">
                 Fill Registration Form
               </a>
               <a className="button-secondary dark-outline" href={ formLink } target="_blank" rel="noreferrer">

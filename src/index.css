@@ -37,6 +37,61 @@ a {
   margin: 0 auto;
 }
 
+.dialog-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  background: rgba(8, 16, 10, 0.62);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.register-dialog {
+  width: min(480px, 100%);
+  background: linear-gradient(165deg, #f9fbf5, #e6eedf);
+  border: 1px solid #bfd1b4;
+  border-radius: 14px;
+  padding: 1.2rem 1.1rem;
+  text-align: center;
+  box-shadow: 0 20px 45px rgba(8, 22, 12, 0.35);
+  animation: fadeLift 0.35s ease both;
+}
+
+.register-dialog h3 {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  color: #2e4b31;
+  font-size: 1.6rem;
+}
+
+.register-dialog p {
+  margin: 0.75rem 0 1rem;
+  color: #334c36;
+  line-height: 1.55;
+}
+
+.dialog-button {
+  min-width: 170px;
+}
+
+.dialog-close {
+  display: block;
+  width: 100%;
+  margin-top: 0.65rem;
+  border: 1px solid #90a885;
+  background: #f8fcf4;
+  color: #2a3f2b;
+  padding: 0.65rem 0.85rem;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.dialog-close:hover {
+  background: #eef7e6;
+}
+
 .scroll-progress {
   position: fixed;
   top: 0;
@@ -303,6 +358,10 @@ a {
   background: #e9c567;
   transform: translateY(-2px);
   box-shadow: 0 12px 24px rgba(43, 56, 35, 0.28);
+}
+
+.blink-cta {
+  animation: ctaBlink 1s steps(2, start) infinite, ctaGlow 1.4s ease-in-out infinite;
 }
 
 .button-secondary {
@@ -633,6 +692,24 @@ a {
   }
   100% {
     filter: brightness(1);
+  }
+}
+
+@keyframes ctaBlink {
+  50% {
+    opacity: 0.55;
+  }
+}
+
+@keyframes ctaGlow {
+  0% {
+    box-shadow: 0 0 0 rgba(233, 197, 103, 0);
+  }
+  50% {
+    box-shadow: 0 0 18px rgba(233, 197, 103, 0.75);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(233, 197, 103, 0);
   }
 }
 
