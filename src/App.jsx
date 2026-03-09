@@ -168,10 +168,10 @@ const committee = [
 ]
 
 const dates = [
-  { label: "Abstract Submission Deadline", value: "April 12, 2026" },
-  { label: "Acceptance Notification", value: "April 18, 2026" },
-  { label: "Final Paper Submission", value: "April 24, 2026" },
-  { label: "Seminar Date", value: "May 2, 2026 (Hybrid Mode)" },
+//   { label: "Abstract Submission Deadline", value: "March 15, 2026" },
+//   { label: "Acceptance Notification", value: "March 24, 2026" },
+  { label: "Final Paper Submission", value: "March 30, 2026" },
+  { label: "Seminar Date", value: "April 6 & 7 2026 (Hybrid Mode)" },
 ]
 
 const formLink = "https://forms.gle/LgZdeZfkKwTZwS1J9"
