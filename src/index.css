@@ -284,18 +284,10 @@ a {
   color: #2f4a32;
 }
 
-.profile-heading {
-  margin-top: 0.75rem !important;
+.profile-summary {
+  margin-top: 0.55rem !important;
   font-size: 0.92rem;
-  color: #2f4a32;
-}
-
-.profile-list {
-  margin: 0.2rem 0 0;
-  padding-left: 1.1rem;
-  color: #334533;
   line-height: 1.45;
-  font-size: 0.92rem;
 }
 
 .avatar {

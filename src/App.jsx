@@ -217,7 +217,7 @@ function App() {
             className="college-logo"
           />
           <div>
-            <p className="brand-title">MLK College National Seminar 2026</p>
+            <p className="brand-title">MLK (P.G.) College National Seminar 2026</p>
             <p className="brand-subtitle">Balrampur, Uttar Pradesh</p>
           </div>
         </div>
@@ -242,7 +242,7 @@ function App() {
         <p className="kicker">National Seminar</p>
         <h1>Latest Trends in Cyber Security and AI/ML</h1>
         <p className="hero-line">
-          Organized by Maharani Lal Kunwari (P.G.) College, Balrampur
+          Organized by B.C.A Department of Maharani Lal Kunwari (P.G.) College, Balrampur
         </p>
         <div className="hero-cta">
           <a href={formLink} target="_blank" rel="noreferrer" className="button-primary">
@@ -325,38 +325,9 @@ function App() {
                 <strong>Email:</strong>{" "}
                 <a href={`mailto:${speaker.email}`}>{speaker.email}</a>
               </p>
-              <p className="profile-heading"><strong>Academic Qualification</strong></p>
-              <ul className="profile-list">
-                {speaker.qualifications.map((item) => (
-                  <li key={`${speaker.name}-q-${item}`}>{item}</li>
-                ))}
-              </ul>
-              <p className="profile-heading"><strong>Research Areas</strong></p>
-              <ul className="profile-list">
-                {speaker.researchAreas.map((item) => (
-                  <li key={`${speaker.name}-r-${item}`}>{item}</li>
-                ))}
-              </ul>
-              {speaker.experience && (
-                <>
-                  <p className="profile-heading"><strong>Professional Experience</strong></p>
-                  <ul className="profile-list">
-                    {speaker.experience.map((item) => (
-                      <li key={`${speaker.name}-e-${item}`}>{item}</li>
-                    ))}
-                  </ul>
-                </>
-              )}
-              {speaker.achievements && (
-                <>
-                  <p className="profile-heading"><strong>Achievements</strong></p>
-                  <ul className="profile-list">
-                    {speaker.achievements.map((item) => (
-                      <li key={`${speaker.name}-a-${item}`}>{item}</li>
-                    ))}
-                  </ul>
-                </>
-              )}
+              <p className="profile-summary">
+                <strong>Research:</strong> {speaker.researchAreas.slice(0, 3).join(", ")}
+              </p>
             </article>
           ))}
         </div>
@@ -434,7 +405,7 @@ function App() {
       </section>
 
       <footer className="footer">
-        <p>MLK College | National Seminar 2026 | Department of Computer Science</p>
+        <p>MLK (P.G.) College | National Seminar 2026 | B.C.A Department</p>
       </footer>
     </div>
   )
