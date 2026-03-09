@@ -1,8 +1,163 @@
 const speakers = [
-  { name: "Dr. A. K. Sharma", role: "Keynote Speaker, Cyber Forensics", initials: "AS" },
-  { name: "Prof. Neha Verma", role: "AI Governance and Ethics", initials: "NV" },
-  { name: "Mr. Raghav Singh", role: "SOC Lead, Threat Intelligence", initials: "RS" },
-  { name: "Dr. Fatima Khan", role: "Machine Learning Security", initials: "FK" },
+  {
+    name: "Dr. Ashish Sharma",
+    designation: "Associate Professor",
+    department: "Department of Computer Engineering",
+    institution: "Manipal University",
+    location: "Jaipur, Rajasthan",
+    email: "sharma.ashish@jaipur.manipal.edu",
+    qualifications: [
+      "Ph.D., MNIT Jaipur, 2020",
+      "M.Tech., MNIT Jaipur, 2011",
+      "B.E., University of Rajasthan, 2004",
+    ],
+    researchAreas: [
+      "CPS",
+      "Neural Rehabilitation",
+      "Brain Computer Interface and Bio-robotics",
+      "High Performance Computing (Embedded, manycore)",
+    ],
+    image: "/assets/speaker1.JPG",
+  },
+  {
+    name: "Dr. Navin Kumar",
+    designation: "Associate Professor",
+    department: "Department of Information Technology",
+    institution: "Amity University",
+    location: "Bihar",
+    email: "nkumar6@ptn.amity.edu",
+    qualifications: [
+      "Ph.D. (CSE), Pondicherry University, 2018",
+      "MCA, School of Engineering and Technology, Pondicherry University, 2012",
+      "MBA (General), Pondicherry University, 2017",
+      "PG Diploma (Statistical and Research Methodology), Pondicherry University, 2015",
+    ],
+    researchAreas: ["Spatial Data Computation", "Deep Learning", "Data Science"],
+    experience: [
+      "Professional Membership IEEE",
+      "Professional Membership ACM",
+      "Life Time Member (Indian Science Congress Association)",
+    ],
+    image: "/assets/Speaker2.JPG",
+  },
+  {
+    name: "Dr. Divyanshu Awasthi",
+    designation: "Assistant Professor",
+    department: "Department of Electronics",
+    institution: "GLA University",
+    location: "Mathura, Uttar Pradesh",
+    email: "divyanshu.awasthi@gla.ac.in",
+    qualifications: [
+      "Ph.D. in Information Security, MNNIT Allahabad, 2024",
+      "M.Tech. in Signal Processing, MNNIT Allahabad, 2021",
+      "B.Tech. in ECE, University of Allahabad, 2018",
+    ],
+    researchAreas: [
+      "Data Hiding Techniques",
+      "Multimedia Security",
+      "Image Processing",
+      "Cryptography",
+      "Deep Learning",
+    ],
+    experience: [
+      "Published 20+ research papers in reputed international journals on secure image watermarking, optimization, and medical image security.",
+    ],
+    image: "/assets/speaker3.JPG",
+  },
+  {
+    name: "Dr. Prasanjit Dhar",
+    designation: "Assistant Professor",
+    department: "Department of Computer Science",
+    institution: "GLA University",
+    location: "Mathura, Uttar Pradesh",
+    email: "Prasanjitdhar.cse@gmail.com",
+    qualifications: ["Ph.D. (NIT Silchar)"],
+    researchAreas: ["Image Processing", "Machine Learning", "Deep Learning"],
+    image: "/assets/speaker4.JPG",
+  },
+  {
+    name: "Mr. Devendra Kumar Gupta",
+    designation: "Lecturer",
+    department: "Department of CSE",
+    institution: "Government Polytechnic College Tonk",
+    location: "Tonk, Rajasthan",
+    email: "Devendra_kr_gupta@yahoo.co.in",
+    qualifications: ["B.Tech.", "M.Tech."],
+    researchAreas: ["Machine Learning"],
+    image: "/assets/Seaker5.JPG",
+  },
+  {
+    name: "Dr. Rajan Prasad",
+    designation: "Associate Professor",
+    department: "Department of Computer Science",
+    institution: "SRMCEM",
+    location: "Uttar Pradesh",
+    email: "drrajanpd1@bbdu.ac.in",
+    qualifications: ["B.Tech.", "M.Tech.", "Ph.D. (Computer Science)"],
+    researchAreas: ["Artificial Intelligence", "Fuzzy Systems", "Machine Learning"],
+    image: "/assets/Speaker6.JPG",
+  },
+  {
+    name: "Dr. Raj Shree Pandey",
+    designation: "Associate Professor, Head",
+    department: "Department of Information Technology",
+    institution: "BBAU",
+    location: "Uttar Pradesh",
+    email: "rajshree.bbau2009@gmail.com",
+    qualifications: ["MCA", "M.Tech.", "NET", "Ph.D."],
+    researchAreas: [
+      "Mobile Ad Hoc Networks",
+      "Wireless Sensor Network",
+      "Routing",
+      "Security",
+      "Image Processing",
+    ],
+    experience: ["Teaching: 20 years", "Research: 15 years"],
+    achievements: [
+      "Recipient of DG's Plaque of Honour and Commandant's Gold Medal at Officers Training Academy, Gwalior.",
+      "Awarded Gaurav Samman (2020) by BBAU for academic and research excellence.",
+      "Published research papers, books, and patents in wireless networks, mobile computing, and image processing.",
+    ],
+    image: "/assets/speaker7.JPG",
+  },
+  {
+    name: "Dr. Rashmi Shekhar",
+    designation: "Assistant Director",
+    department: "Academic Department",
+    institution: "AIT Patna, Amity University",
+    location: "Bihar",
+    email: "rshekhar@ptn.amity.edu",
+    qualifications: [
+      "Ph.D., T.M. Bhagalpur University, 2019",
+      "MCA, IGNOU, 2009",
+      "PGDCA, IGNOU, 2007",
+      "BCA, Patna University, 2003",
+    ],
+    researchAreas: [
+      "Programming Language",
+      "AI Security",
+      "Social Engineering",
+      "Compiler Design",
+      "TOC and IT",
+    ],
+    experience: [
+      "Professional Membership of IEEE",
+      "Member of Computer Society of India",
+      "ELTAI Member",
+    ],
+    image: "/assets/speaker8.JPG",
+  },
+  {
+    name: "Smt. Shraddha Saxena",
+    designation: "Subject Matter Expert (AI & ML)",
+    department: "School of Computing",
+    institution: "Amity University",
+    location: "Punjab",
+    email: "saxena.29shra@gmail.com",
+    qualifications: ["M.Tech. (SATI Vidisha)"],
+    researchAreas: ["Deep Learning", "Blockchain"],
+    experience: ["AI & ML"],
+  },
 ]
 
 const committee = [
@@ -42,6 +197,15 @@ const themes = [
   "Future Trends in Intelligent Cyber Defense and Smart Security Systems",
 ]
 
+const getInitials = (name) =>
+  name
+    .replace(/\b(Dr|Mr|Mrs|Ms|Smt)\.?\s*/gi, "")
+    .split(" ")
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0].toUpperCase())
+    .join("")
+
 function App() {
   return (
     <div className="site-shell">
@@ -61,7 +225,7 @@ function App() {
           <a href="#about">About</a>
           <a href="#objective">Objective</a>
           <a href="#themes">Themes</a>
-          <a href="#speakers">Speakers</a>
+          <a href="#speakers">Advisory</a>
           <a href="#committee">Committee</a>
           <a href="#dates">Important Dates</a>
           <a href="#register">Registration</a>
@@ -139,13 +303,60 @@ function App() {
       </section>
 
       <section id="speakers" className="panel">
-        <h2>Invited Speakers</h2>
+        <h2>National Advisory Committee (External)</h2>
         <div className="grid speakers-grid">
           {speakers.map((speaker) => (
-            <article key={speaker.name} className="speaker-card">
-              <div className="avatar">{speaker.initials}</div>
+            <article key={speaker.name} className="speaker-card profile-card">
+              {speaker.image ? (
+                <img
+                  src={speaker.image}
+                  alt={speaker.name}
+                  className="speaker-photo"
+                />
+              ) : (
+                <div className="avatar">{getInitials(speaker.name)}</div>
+              )}
               <h3>{speaker.name}</h3>
-              <p>{speaker.role}</p>
+              <p className="profile-designation">{speaker.designation}</p>
+              <p><strong>Department:</strong> {speaker.department}</p>
+              <p><strong>Institution:</strong> {speaker.institution}</p>
+              <p><strong>Location:</strong> {speaker.location}</p>
+              <p>
+                <strong>Email:</strong>{" "}
+                <a href={`mailto:${speaker.email}`}>{speaker.email}</a>
+              </p>
+              <p className="profile-heading"><strong>Academic Qualification</strong></p>
+              <ul className="profile-list">
+                {speaker.qualifications.map((item) => (
+                  <li key={`${speaker.name}-q-${item}`}>{item}</li>
+                ))}
+              </ul>
+              <p className="profile-heading"><strong>Research Areas</strong></p>
+              <ul className="profile-list">
+                {speaker.researchAreas.map((item) => (
+                  <li key={`${speaker.name}-r-${item}`}>{item}</li>
+                ))}
+              </ul>
+              {speaker.experience && (
+                <>
+                  <p className="profile-heading"><strong>Professional Experience</strong></p>
+                  <ul className="profile-list">
+                    {speaker.experience.map((item) => (
+                      <li key={`${speaker.name}-e-${item}`}>{item}</li>
+                    ))}
+                  </ul>
+                </>
+              )}
+              {speaker.achievements && (
+                <>
+                  <p className="profile-heading"><strong>Achievements</strong></p>
+                  <ul className="profile-list">
+                    {speaker.achievements.map((item) => (
+                      <li key={`${speaker.name}-a-${item}`}>{item}</li>
+                    ))}
+                  </ul>
+                </>
+              )}
             </article>
           ))}
         </div>

@@ -239,7 +239,7 @@ a {
 }
 
 .speakers-grid {
-  grid-template-columns: repeat(4, minmax(180px, 1fr));
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
 }
 
 .speaker-card,
@@ -262,6 +262,40 @@ a {
 .committee-card p {
   margin: 0;
   color: #495946;
+}
+
+.profile-card {
+  text-align: left;
+}
+
+.speaker-photo {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #d2ddca;
+  display: block;
+  margin: 0 auto;
+}
+
+.profile-designation {
+  margin-top: 0.25rem;
+  font-weight: 700;
+  color: #2f4a32;
+}
+
+.profile-heading {
+  margin-top: 0.75rem !important;
+  font-size: 0.92rem;
+  color: #2f4a32;
+}
+
+.profile-list {
+  margin: 0.2rem 0 0;
+  padding-left: 1.1rem;
+  color: #334533;
+  line-height: 1.45;
+  font-size: 0.92rem;
 }
 
 .avatar {
