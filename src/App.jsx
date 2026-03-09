@@ -392,7 +392,7 @@ function App() {
         <h2>Contact Information</h2>
         <div className="contact-grid">
           <p>
-            <strong>Address:</strong> Maharani Lal Kunwari (P.G.) College, Tulsipur Road, Balrampur, Uttar Pradesh 271201
+            <strong>Address:</strong> Department of BCA, Maharani Lal Kunwari (P.G.) College, Tulsipur Road, Balrampur, Uttar Pradesh 271201
           </p>
           <p>
             <strong>Email:</strong> itcsaiml.26@gmail.com,mlk.college1955@gmail.com
