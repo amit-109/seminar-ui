@@ -395,10 +395,10 @@ function App() {
             <strong>Address:</strong> Department of BCA, Maharani Lal Kunwari (P.G.) College, Tulsipur Road, Balrampur, Uttar Pradesh 271201
           </p>
           <p>
-            <strong>Email:</strong> itcsaiml.26@gmail.com,mlk.college1955@gmail.com
+            <strong>Email:</strong> itcsaiml.26@gmail.com , mlk.college1955@gmail.com
           </p>
           <p>
-            <strong>Mobile:</strong>8574759591,8858115835,9450512588 
+            <strong>Mobile:</strong> 8574759591 , 8858115835 , 9450512588 
           </p>
           <p>
             <strong>Phone:</strong> 05263-234139
