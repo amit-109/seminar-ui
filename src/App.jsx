@@ -225,7 +225,8 @@ function App() {
           <a href="#about">About</a>
           <a href="#objective">Objective</a>
           <a href="#themes">Themes</a>
-          <a href="#speakers">Advisory</a>
+          <a href="#speakers">Invited Guest Speakers
+          </a>
           <a href="#committee">Committee</a>
           <a href="#dates">Important Dates</a>
           <a href="#register">Registration</a>
@@ -245,7 +246,7 @@ function App() {
           Organized by B.C.A Department of Maharani Lal Kunwari (P.G.) College, Balrampur
         </p>
         <div className="hero-cta">
-          <a href={formLink} target="_blank" rel="noreferrer" className="button-primary">
+          <a href={ formLink } target="_blank" rel="noreferrer" className="button-primary">
             Register Now
           </a>
           <a href="#about" className="button-secondary">
@@ -287,73 +288,74 @@ function App() {
           innovative solutions for addressing modern cyber challenges.
         </p>
         <ul>
-          {objectivePoints.map((point) => (
-            <li key={point}>{point}</li>
-          ))}
+          { objectivePoints.map((point) => (
+            <li key={ point }>{ point }</li>
+          )) }
         </ul>
       </section>
 
       <section id="themes" className="panel">
         <h2>Themes and Sub-Themes</h2>
         <ol>
-          {themes.map((theme) => (
-            <li key={theme}>{theme}</li>
-          ))}
+          { themes.map((theme) => (
+            <li key={ theme }>{ theme }</li>
+          )) }
         </ol>
       </section>
 
       <section id="speakers" className="panel">
-        <h2>National Advisory Committee (External)</h2>
+        <h2>Invited Guest Speakers
+        </h2>
         <div className="grid speakers-grid">
-          {speakers.map((speaker) => (
-            <article key={speaker.name} className="speaker-card profile-card">
-              {speaker.image ? (
+          { speakers.map((speaker) => (
+            <article key={ speaker.name } className="speaker-card profile-card">
+              { speaker.image ? (
                 <img
-                  src={speaker.image}
-                  alt={speaker.name}
+                  src={ speaker.image }
+                  alt={ speaker.name }
                   className="speaker-photo"
                 />
               ) : (
-                <div className="avatar">{getInitials(speaker.name)}</div>
-              )}
-              <h3>{speaker.name}</h3>
-              <p className="profile-designation">{speaker.designation}</p>
-              <p><strong>Department:</strong> {speaker.department}</p>
-              <p><strong>Institution:</strong> {speaker.institution}</p>
-              <p><strong>Location:</strong> {speaker.location}</p>
+                <div className="avatar">{ getInitials(speaker.name) }</div>
+              ) }
+              <h3>{ speaker.name }</h3>
+              <p className="profile-designation">{ speaker.designation }</p>
+              <p><strong>Department:</strong> { speaker.department }</p>
+              <p><strong>Institution:</strong> { speaker.institution }</p>
+              <p><strong>Location:</strong> { speaker.location }</p>
               <p>
-                <strong>Email:</strong>{" "}
-                <a href={`mailto:${speaker.email}`}>{speaker.email}</a>
+                <strong>Email:</strong>{ " " }
+                <a href={ `mailto:${speaker.email}` }>{ speaker.email }</a>
               </p>
               <p className="profile-summary">
-                <strong>Research:</strong> {speaker.researchAreas.slice(0, 3).join(", ")}
+                <strong>Research:</strong> { speaker.researchAreas.slice(0, 3).join(", ") }
               </p>
             </article>
-          ))}
+          )) }
         </div>
       </section>
 
       <section id="committee" className="panel panel-accent">
         <h2>Organizing Committee</h2>
         <div className="grid committee-grid">
-          {committee.map((member) => (
-            <article key={member.name} className="committee-card">
-              <h3>{member.name}</h3>
-              <p>{member.post}</p>
+          { committee.map((member) => (
+            <article key={ member.name } className="committee-card">
+              <h3>{ member.name }</h3>
+              <p>{ member.post }</p>
             </article>
-          ))}
+          )) }
         </div>
       </section>
 
       <section id="dates" className="panel">
         <h2>Important Dates</h2>
         <div className="timeline">
-          {dates.map((item) => (
-            <div key={item.label} className="timeline-item">
-              <p className="timeline-label">{item.label}</p>
-              <p className="timeline-value">{item.value}</p>
+          { dates.map((item) => (
+            <div key={ item.label } className="timeline-item">
+              <p className="timeline-label">{ item.label }</p>
+              <p className="timeline-value">{ item.value }</p>
             </div>
-          ))}
+          )) }
         </div>
       </section>
 
@@ -371,14 +373,14 @@ function App() {
           />
           <div className="register-content">
             <p className="register-link-label">Google Form Link:</p>
-            <a href={formLink} target="_blank" rel="noreferrer" className="form-link">
-              {formLink}
+            <a href={ formLink } target="_blank" rel="noreferrer" className="form-link">
+              { formLink }
             </a>
             <div className="hero-cta register-actions">
-              <a className="button-primary" href={formLink} target="_blank" rel="noreferrer">
+              <a className="button-primary" href={ formLink } target="_blank" rel="noreferrer">
                 Fill Registration Form
               </a>
-              <a className="button-secondary dark-outline" href={formLink} target="_blank" rel="noreferrer">
+              <a className="button-secondary dark-outline" href={ formLink } target="_blank" rel="noreferrer">
                 Open Form in New Tab
               </a>
             </div>
