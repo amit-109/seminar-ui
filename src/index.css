@@ -546,6 +546,45 @@ a {
   margin-inline: auto;
 }
 
+.committee-header {
+  max-width: 930px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.committee-subtitle {
+  margin: 0 auto 0.6rem;
+  max-width: 930px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  color: #35603b;
+}
+
+.committee-selector select {
+  min-width: 220px;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.95rem;
+  border-radius: 10px;
+  border: 1px solid #c8d1c0;
+  background: #fbfbf7;
+  color: #2f4a32;
+}
+
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
 .timeline {
   max-width: 860px;
   margin: 1.6rem auto 0;

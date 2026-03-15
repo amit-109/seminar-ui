@@ -162,11 +162,57 @@ const speakers = [
   },
 ]
 
-const committee = [
-  { name: "Prof. J. P. Pandey", post: "Chief Patron, Principal MLK College" },
-  { name: "Dr. Kavita Tiwari", post: "Conference Chair, Department of Computer Science" },
-  { name: "Dr. Arvind Jain", post: "Organizing Secretary, Cyber Cell" },
-  { name: "Ms. Ananya Yadav", post: "Co-Organizing Secretary, AI Club" },
+const committees = [
+  {
+    id: "leadership",
+    title: "Leadership & Patrons",
+    members: [
+      { name: "Shriman Maharaja Jayendra Pratap Singh", post: "Founder President" },
+      { name: "Prof. Ravi Shankar Singh", post: "Chief Patron (Vice Chancellor, Maa Pateswari University, Balrampur, UP)" },
+      { name: "Justice Sri D.P. Singh (Retd.)", post: "Patron" },
+      { name: "Lt. Col. (Retd.) Sanjeev Kumar Varshney", post: "Patron; President, Management Committee" },
+      { name: "Sri B.K. Singh", post: "Co Patron; Joint Secretary, Committee of Management" },
+      { name: "Prof. Janardhan Prasad Pandey", post: "President (Principal)" },
+      { name: "Prof S.P. Mishra", post: "Coordinator (IQAC)" },
+      { name: "Dr. Sadguru Prakash", post: "Convener (Asst. Prof., Department of Zoology)" },
+      { name: "Mr. Avinash Singh", post: "Organizing Secretary (Head, Department of B.C.A)" },
+    ],
+  },
+  {
+    id: "organising",
+    title: "Organising Committee",
+    members: [
+      { name: "Prof. Mohiuddin Ansari", post: "Department of Chemistry" },
+      { name: "Prof. Ashok Kumar", post: "Head, Department of Zoology" },
+      { name: "Dr. Rishi Ranjan Pandey", post: "Asst. Prof., Department of Chemistry" },
+      { name: "Dr. Jitendra Bhatt", post: "Asst. Prof., Department of Chemistry" },
+      { name: "Dr. Swadesh Bhatt", post: "Head, Department of Psychology" },
+      { name: "Mr. Abhishek Singh", post: "Asst. Prof., Department of BCA" },
+      { name: "Mr. Masood Murad Khan", post: "Asst. Prof., Department of BCA" },
+    ],
+  },
+  {
+    id: "coordinating",
+    title: "Coordinating Committee",
+    members: [
+      { name: "Dr. P.N. Pathak", post: "Asst. Prof., Department of Commerce" },
+      { name: "Dr. S.K. Tripathi", post: "Head, Department of Commerce" },
+      { name: "Dr. K.K. Singh", post: "Asst. Prof., Department of Commerce" },
+      { name: "Dr. K.P. Mishra", post: "Asst. Prof., Department of Commerce" },
+      { name: "Dr. P.K. Srivastava", post: "Asst. Prof., Department of Commerce" },
+      { name: "Dr. Rahul Visen", post: "Head, Department of B.B.A." },
+      { name: "Dr. Pawan Singh", post: "Asst. Prof., Department of B.B.A." },
+    ],
+  },
+  {
+    id: "technical",
+    title: "Technical Committee",
+    members: [
+      { name: "Mr. Ramesh Kumar Gupta", post: "Department of B.C.A." },
+      { name: "Mr. Ashish Mishra", post: "Department of B.C.A." },
+      { name: "Mr. Amit Rai", post: "Department of B.C.A." },
+    ],
+  },
 ]
 
 const dates = [
@@ -227,6 +273,12 @@ function App() {
   const [now, setNow] = useState(new Date())
   const [scrollProgress, setScrollProgress] = useState(0)
   const [showRegisterDialog, setShowRegisterDialog] = useState(false)
+  const [activeCommitteeId, setActiveCommitteeId] = useState(committees[0].id)
+
+  const activeCommittee = useMemo(
+    () => committees.find((c) => c.id === activeCommitteeId) ?? committees[0],
+    [activeCommitteeId]
+  )
 
   useEffect(() => {
     const timer = setInterval(() => setNow(new Date()), 1000)
@@ -457,9 +509,29 @@ function App() {
       </section>
 
       <section id="committee" className="panel panel-accent">
-        <h2>Organizing Committee</h2>
+        <div className="committee-header">
+          <h2>Committee</h2>
+          <div className="committee-selector">
+            <label htmlFor="committeeSelect" className="visually-hidden">
+              Select committee to view
+            </label>
+            <select
+              id="committeeSelect"
+              value={ activeCommitteeId }
+              onChange={ (e) => setActiveCommitteeId(e.target.value) }
+            >
+              { committees.map((group) => (
+                <option key={ group.id } value={ group.id }>
+                  { group.title }
+                </option>
+              )) }
+            </select>
+          </div>
+        </div>
+
+        <h3 className="committee-subtitle">{ activeCommittee.title }</h3>
         <div className="grid committee-grid">
-          { committee.map((member) => (
+          { activeCommittee.members.map((member) => (
             <article key={ member.name } className="committee-card">
               <h3>{ member.name }</h3>
               <p>{ member.post }</p>
