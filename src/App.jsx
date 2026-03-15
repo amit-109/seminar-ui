@@ -216,6 +216,7 @@ const committees = [
 ]
 
 const dates = [
+  { label: "Registration Deadline", value: "April 2, 2026" },
 //   { label: "Abstract Submission Deadline", value: "March 15, 2026" },
 //   { label: "Acceptance Notification", value: "March 24, 2026" },
   { label: "Final Paper Submission", value: "March 30, 2026" },
@@ -269,6 +270,7 @@ const getInitials = (name) =>
     .join("")
 
 function App() {
+  const collegeUrl = "https://mlkcollege.ac.in"
   const seminarDate = useMemo(() => new Date("2026-04-06T09:00:00+05:30"), [])
   const [now, setNow] = useState(new Date())
   const [scrollProgress, setScrollProgress] = useState(0)
@@ -332,7 +334,7 @@ function App() {
         <span style={ { width: `${scrollProgress}%` } } />
       </div>
       <header className="topbar">
-        <div className="brand">
+        <a href={collegeUrl} target="_blank" rel="noreferrer" className="brand">
           <img
             src="/assets/college-logo.png"
             alt="MLK College Logo"
@@ -342,7 +344,7 @@ function App() {
             <p className="brand-title">MLK (P.G.) College National Seminar 2026</p>
             <p className="brand-subtitle">Balrampur, Uttar Pradesh</p>
           </div>
-        </div>
+        </a>
         <nav className="nav-links">
           <a href="#about">About</a>
           <a href="#objective">Objective</a>
@@ -529,14 +531,33 @@ function App() {
           </div>
         </div>
 
-        <h3 className="committee-subtitle">{ activeCommittee.title }</h3>
-        <div className="grid committee-grid">
-          { activeCommittee.members.map((member) => (
-            <article key={ member.name } className="committee-card">
-              <h3>{ member.name }</h3>
-              <p>{ member.post }</p>
-            </article>
-          )) }
+        <div className="committee-layout">
+          <nav className="committee-sidebar" aria-label="Committee navigation">
+            { committees.map((group) => (
+              <button
+                key={ group.id }
+                type="button"
+                className={
+                  "committee-tab " + (group.id === activeCommitteeId ? "active" : "")
+                }
+                onClick={ () => setActiveCommitteeId(group.id) }
+              >
+                { group.title }
+              </button>
+            )) }
+          </nav>
+
+          <div className="committee-main">
+            <h3 className="committee-subtitle">{ activeCommittee.title }</h3>
+            <div className="grid committee-grid">
+              { activeCommittee.members.map((member) => (
+                <article key={ member.name } className="committee-card">
+                  <h3>{ member.name }</h3>
+                  <p>{ member.post }</p>
+                </article>
+              )) }
+            </div>
+          </div>
         </div>
       </section>
 
