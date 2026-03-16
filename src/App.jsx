@@ -182,6 +182,8 @@ const committees = [
     id: "organising",
     title: "Organising Committee",
     members: [
+      { name: "Prof. Raghvendra Singh", post: "Department of Teacher Education" },
+
       { name: "Prof. Mohiuddin Ansari", post: "Department of Chemistry" },
       { name: "Prof. Ashok Kumar", post: "Head, Department of Zoology" },
       { name: "Dr. Rishi Ranjan Pandey", post: "Asst. Prof., Department of Chemistry" },
@@ -217,8 +219,8 @@ const committees = [
 
 const dates = [
   { label: "Registration Deadline", value: "April 2, 2026" },
-//   { label: "Abstract Submission Deadline", value: "March 15, 2026" },
-//   { label: "Acceptance Notification", value: "March 24, 2026" },
+  //   { label: "Abstract Submission Deadline", value: "March 15, 2026" },
+  //   { label: "Acceptance Notification", value: "March 24, 2026" },
   { label: "Final Paper Submission", value: "March 30, 2026" },
   { label: "Seminar Date", value: "April 6 & 7 2026 (Hybrid Mode)" },
 ]
@@ -311,30 +313,30 @@ function App() {
 
   return (
     <div className="site-shell">
-      {showRegisterDialog && (
+      { showRegisterDialog && (
         <div className="dialog-backdrop" role="dialog" aria-modal="true" aria-label="Seminar registration">
           <div className="register-dialog">
             <h3>National Seminar 2026</h3>
             <p>Registrations are open for the seminar on Latest Trends in Cyber Security and AI/ML.</p>
-            <a href={formLink} target="_blank" rel="noreferrer" className="button-primary dialog-button blink-cta">
+            <a href={ formLink } target="_blank" rel="noreferrer" className="button-primary dialog-button blink-cta">
               Register Now
             </a>
             <button
               type="button"
               className="dialog-close"
-              onClick={() => setShowRegisterDialog(false)}
+              onClick={ () => setShowRegisterDialog(false) }
             >
               Continue to Website
             </button>
           </div>
         </div>
-      )}
+      ) }
 
       <div className="scroll-progress">
         <span style={ { width: `${scrollProgress}%` } } />
       </div>
       <header className="topbar">
-        <a href={collegeUrl} target="_blank" rel="noreferrer" className="brand">
+        <a href={ collegeUrl } target="_blank" rel="noreferrer" className="brand">
           <img
             src="/assets/college-logo.png"
             alt="MLK College Logo"
@@ -368,7 +370,7 @@ function App() {
         <div className="hero-grid-overlay" aria-hidden="true" />
         <p className="kicker">National Seminar</p>
         <h1>
-          Latest Trends in <span className="cyber-highlight">Cyber Security</span> and{" "}
+          Latest Trends in <span className="cyber-highlight">Cyber Security</span> and{ " " }
           <span className="cyber-highlight">AI/ML</span>
         </h1>
         <p className="hero-line">
@@ -386,15 +388,15 @@ function App() {
           <p className="countdown-title">Seminar Starts In</p>
           <div className="countdown-grid">
             <div className="countdown-chip">
-              <span>{days}</span>
+              <span>{ days }</span>
               <small>Days</small>
             </div>
             <div className="countdown-chip">
-              <span>{hours}</span>
+              <span>{ hours }</span>
               <small>Hours</small>
             </div>
             <div className="countdown-chip">
-              <span>{minutes}</span>
+              <span>{ minutes }</span>
               <small>Minutes</small>
             </div>
           </div>
@@ -403,11 +405,11 @@ function App() {
 
       <section className="cyber-ticker" aria-label="Seminar highlights">
         <div className="ticker-track">
-          {[...tickerItems, ...tickerItems].map((item, idx) => (
-            <span key={`${item}-${idx}`} className="ticker-item">
-              {item}
+          { [...tickerItems, ...tickerItems].map((item, idx) => (
+            <span key={ `${item}-${idx}` } className="ticker-item">
+              { item }
             </span>
-          ))}
+          )) }
         </div>
       </section>
 
@@ -466,15 +468,15 @@ function App() {
           predictive analytics, and automated response strategies.
         </p>
         <div className="ai-grid">
-          {aiTracks.map((track) => (
-            <article key={track.title} className="ai-card">
-              <h3>{track.title}</h3>
-              <p>{track.detail}</p>
-              <div className="ai-meter" role="img" aria-label={`${track.title} readiness ${track.level} percent`}>
-                <span style={{ width: `${track.level}%` }} />
+          { aiTracks.map((track) => (
+            <article key={ track.title } className="ai-card">
+              <h3>{ track.title }</h3>
+              <p>{ track.detail }</p>
+              <div className="ai-meter" role="img" aria-label={ `${track.title} readiness ${track.level} percent` }>
+                <span style={ { width: `${track.level}%` } } />
               </div>
             </article>
-          ))}
+          )) }
         </div>
       </section>
 
@@ -612,7 +614,7 @@ function App() {
             <strong>Email:</strong> itcsaiml.26@gmail.com , mlk.college1955@gmail.com
           </p>
           <p>
-            <strong>Mobile:</strong> 8574759591 , 8858115835 , 9450512588 
+            <strong>Mobile:</strong> 8574759591 , 8858115835 , 9450512588
           </p>
           <p>
             <strong>Phone:</strong> 05263-234139
