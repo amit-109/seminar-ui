@@ -107,7 +107,7 @@ const speakers = [
     name: "Dr. Rajan Prasad",
     designation: "Associate Professor",
     department: "Department of Computer Science",
-    institution: "SRMCEM",
+    institution: "BBDU",
     location: "Uttar Pradesh",
     email: "drrajanpd1@bbdu.ac.in",
     qualifications: ["B.Tech.", "M.Tech.", "Ph.D. (Computer Science)"],
@@ -223,10 +223,10 @@ const committees = [
 ]
 
 const dates = [
-  { label: "Registration Deadline", value: "April 2, 2026" },
+  { label: "Registration Deadline", value: "April 3, 2026" },
   //   { label: "Abstract Submission Deadline", value: "March 15, 2026" },
   //   { label: "Acceptance Notification", value: "March 24, 2026" },
-  { label: "Final Paper Submission", value: "March 30, 2026" },
+  { label: "Final Paper Submission", value: "April 3, 2026" },
   { label: "Seminar Date", value: "April 6 & 7 2026 (Hybrid Mode)" },
 ]
 
