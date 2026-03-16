@@ -688,6 +688,54 @@ a {
   border-left: 4px solid #7c996f;
 }
 
+.fees-table {
+  max-width: 600px;
+  margin: 1.5rem auto 0;
+  background: #f7faf2;
+  border: 1px solid #c6d2bc;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.fees-table h3 {
+  margin: 0 0 1rem;
+  font-family: "Oswald", sans-serif;
+  color: #2f4a32;
+  font-size: 1.4rem;
+}
+
+.fees-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(32, 46, 28, 0.1);
+}
+
+.fees-table td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #e8f0e0;
+  font-size: 1rem;
+}
+
+.fees-table td:first-child {
+  font-weight: 600;
+  color: #2f4a32;
+  text-align: left;
+}
+
+.fees-table td:last-child {
+  font-weight: 700;
+  color: #1e5630;
+  text-align: right;
+}
+
+.fees-table tr:last-child td {
+  border-bottom: none;
+}
+
 .register-box {
   max-width: 860px;
   margin: 1.6rem auto 0;

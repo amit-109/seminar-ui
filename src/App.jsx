@@ -581,6 +581,25 @@ function App() {
           Participation is open for UG/PG students, research scholars, and faculty members.
           Submit your details through the registration form and include your payment transaction ID.
         </p>
+        <div className="fees-table">
+          <h3>Registration Fee</h3>
+          <table>
+            <tbody>
+              <tr>
+                <td>Faculty Members</td>
+                <td>Rs.500</td>
+              </tr>
+              <tr>
+                <td>Research Scholars</td>
+                <td>Rs.400</td>
+              </tr>
+              <tr>
+                <td>U.G/P.G. Students</td>
+                <td>Rs.150</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <div className="register-box">
           <img
             src="/assets/google-form-qr.png.jpeg"
