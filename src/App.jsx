@@ -176,7 +176,7 @@ const committees = [
       { name: "Justice Sri D.P. Singh (Retd.)", post: "Patron" },
       { name: "Lt. Col. (Retd.) Sanjeev Kumar Varshney", post: "Patron; President, Management Committee" },
       { name: "Sri B.K. Singh", post: "Co Patron; Joint Secretary, Committee of Management" },
-      { name: "Prof. Janardhan Prasad Pandey", post: "President (Principal)" },
+      { name: "Prof. Janardan Prasad Pandey", post: "President (Principal)" },
       { name: "Prof S.P. Mishra", post: "Coordinator (IQAC)" },
       { name: "Dr. Sadguru Prakash", post: "Convener (Asst. Prof., Department of Zoology)" },
       { name: "Mr. Avinash Singh", post: "Organizing Secretary (Head, Department of B.C.A)" },
@@ -223,11 +223,11 @@ const committees = [
 ]
 
 const dates = [
-  { label: "Registration Deadline", value: "April 3, 2026" },
+  { label: "Registration Deadline", value: "April 13, 2026" },
   //   { label: "Abstract Submission Deadline", value: "March 15, 2026" },
   //   { label: "Acceptance Notification", value: "March 24, 2026" },
-  { label: "Final Paper Submission", value: "April 3, 2026" },
-  { label: "Seminar Date", value: "April 6 & 7 2026 (Hybrid Mode)" },
+  { label: "Final Paper Submission", value: "April 13, 2026" },
+  { label: "Seminar Date", value: "April 15 & 16 2026 (Hybrid Mode)" },
 ]
 
 const formLink = "https://forms.gle/LgZdeZfkKwTZwS1J9"
