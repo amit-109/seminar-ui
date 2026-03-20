@@ -192,7 +192,7 @@ const committees = [
       { name: "Prof. Mohiuddin Ansari", post: "Department of Chemistry" },
       { name: "Prof. Ashok Kumar", post: "Head, Department of Zoology" },
       { name: "Dr. Rishi Ranjan Pandey", post: "Asst. Prof., Department of Chemistry" },
-      { name: "Dr. Jitendra Bhatt", post: "Asst. Prof., Department of Chemistry" },
+      { name: "Dr. Jitendra Kumar", post: "Asst. Prof., Department of Chemistry" },
       { name: "Dr. Swadesh Bhatt", post: "Head, Department of Psychology" },
       { name: "Mr. Abhishek Singh", post: "Asst. Prof., Department of BCA" },
       { name: "Mr. Masood Murad Khan", post: "Asst. Prof., Department of BCA" },
