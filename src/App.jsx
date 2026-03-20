@@ -278,7 +278,7 @@ const getInitials = (name) =>
 
 function App() {
   const collegeUrl = "https://mlkcollege.ac.in"
-  const seminarDate = useMemo(() => new Date("2026-04-06T09:00:00+05:30"), [])
+  const seminarDate = useMemo(() => new Date("2026-04-15T09:00:00+05:30"), [])
   const [now, setNow] = useState(new Date())
   const [scrollProgress, setScrollProgress] = useState(0)
   const [showRegisterDialog, setShowRegisterDialog] = useState(false)
