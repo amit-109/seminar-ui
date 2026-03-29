@@ -186,7 +186,7 @@ const committees = [
     id: "organising",
     title: "Organising Committee",
     members: [
-       { name: "Prof. A. K. Dwivedi", post: " Head, Department of Chemistry" },
+       { name: "Prof. A. K. Dwivedi", post: " Head, Department of Physics " },
        { name: "Prof. Mohiuddin Ansari", post: "Department of Chemistry" },
        { name: "Prof. Veena Singh", post: "Department of Mathematics" },
       { name: "Prof. Raghvendra Singh", post: "Department of Teacher Education" },
