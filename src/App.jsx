@@ -46,10 +46,10 @@ const speakers = [
   },
   {
     name: "Dr. Rashmi Shekhar",
-    designation: "Assistant Director",
-    department: "Academic Department",
-    institution: "AIT Patna, Amity University",
-    location: "Bihar",
+    designation: "Deputy Director and Professor",
+    department: "Information Technology",
+    institution: "Amity Institute of Information Technology Patna, Amity University",
+    location: "Patna",
     email: "rshekhar@ptn.amity.edu",
     qualifications: [
       "Ph.D., T.M. Bhagalpur University, 2019",
@@ -186,16 +186,16 @@ const committees = [
     id: "organising",
     title: "Organising Committee",
     members: [
+       { name: "Prof. A. K. Dwivedi", post: " Head, Department of Chemistry" },
+       { name: "Prof. Mohiuddin Ansari", post: "Department of Chemistry" },
+       { name: "Prof. Veena Singh", post: "Department of Mathematics" },
       { name: "Prof. Raghvendra Singh", post: "Department of Teacher Education" },
-      { name: "Prof. Veena Singh", post: "Department of Mathematics" },
-
-      { name: "Prof. Mohiuddin Ansari", post: "Department of Chemistry" },
       { name: "Prof. Ashok Kumar", post: "Head, Department of Zoology" },
       { name: "Dr. Rishi Ranjan Pandey", post: "Asst. Prof., Department of Chemistry" },
-      { name: "Dr. Jitendra Bhatt", post: "Asst. Prof., Department of Chemistry" },
-      { name: "Dr. Swadesh Bhatt", post: "Head, Department of Psychology" },
-      { name: "Mr. Abhishek Singh", post: "Asst. Prof., Department of BCA" },
+      { name: "Dr. Jitendra Kumar", post: "Asst. Prof., Department of Chemistry" },
+      { name: "Dr. Swadesh Bhatt", post: "Head, Department of Psychology" },   
       { name: "Mr. Masood Murad Khan", post: "Asst. Prof., Department of BCA" },
+         { name: "Mr. Abhishek Singh", post: "Asst. Prof., Department of BCA" },
     ],
   },
   {
